@@ -9,38 +9,18 @@
     align-items: center;
 }
 
-.moin {
+.star-left {
     position: absolute;
     left: 0px;
 }
 
-.moin2 {
+.star-right {
     position: absolute;
     left: 50%;
 }
 
 .left-content-container, .right-content-container{
     margin-top: 200px;
-}
-
-.pc {
-    width: 500px;
-}
-
-.headphone {
-    width: 800px;
-}
-
-.reader {
-    width: 300px;
-}
-
-.polaroid {
-    width: 600px;
-}
-
-.polaroidRound {
-    width: 600px;
 }
 
 p {
