@@ -1,3 +1,14 @@
+@font-face {
+    font-family: disco;
+    src: url(/pictures/70SdiscopersonaluseBold-w14z2.otf);
+}
+
+@font-face {
+    font-family: kritzelei;
+    src: url(/pictures/BubbleBath.ttf);
+}
+
+
 .wishlist {
     display: flex;
 }
@@ -20,10 +31,15 @@
     left: 50%;
 }
 
-/* .left-content-container, .right-content-container{
-    margin-top: 200px;
-} */
-
 p {
     text-align: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "disco";
+    font-size: 90px;
+    color: green;
+    rotate: 357deg;
 }
