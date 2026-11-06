@@ -7,6 +7,14 @@
     font-family: kritzelei;
     src: url(/pictures/BubbleBath.ttf);
 }
+@font-face {
+    font-family: portal;
+    src: url(/pictures/Typographica-Blp5.ttf);
+}
+@font-face {
+    font-family: brachial;
+    src: url(/pictures/QuartzoBold-W9lv.ttf);
+}
 
 
 .wishlist {
@@ -33,13 +41,15 @@
 
 p {
     text-align: center;
+    font-family: "portal";
+    font-size: 50px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    font-family: "disco";
+    font-family: "brachial";
     font-size: 90px;
-    color: green;
-    rotate: 357deg;
+    /* color: green;
+    rotate: 357deg; */
 }
