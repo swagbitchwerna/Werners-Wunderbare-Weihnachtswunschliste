@@ -1,6 +1,9 @@
-https://www.svgviewer.dev/
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 253" width="408" height="253">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 408 253"
+     width="408" height="253">
+
+  <!-- Sternform -->
   <path
     d="M204 1
        L226 59
@@ -27,4 +30,19 @@ https://www.svgviewer.dev/
     stroke="#080d10"
     stroke-width="4"
     stroke-linejoin="miter"/>
+
+  <!-- EDITIERBARER TEXT -->
+  <text
+    x="204"
+    y="126"
+    transform="rotate(0, 204, 126)"
+    font-family="Arial, sans-serif"
+    font-size="25"
+    font-weight="bold"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="#080d10">
+    DEIN TEXT
+  </text>
+
 </svg>
