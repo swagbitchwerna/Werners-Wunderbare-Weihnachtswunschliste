@@ -4,10 +4,16 @@
 
 .left-side {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .right-side {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .moin {
@@ -20,7 +26,7 @@
     left: 50%;
 }
 
-.left-content-container {
+.left-content-container, .right-content-container{
     margin-top: 250px;
 }
 
@@ -30,4 +36,8 @@
 
 .headphone {
     width: 800px;
+}
+
+.reader {
+    width: 400px;
 }
