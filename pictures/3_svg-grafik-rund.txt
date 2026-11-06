@@ -1,0 +1,30 @@
+https://www.svgviewer.dev/
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 253" width="408" height="253">
+  <path
+    d="M204 1
+       L226 59
+       L280 21
+       L261 85
+       L328 86
+       L274 126
+       L328 166
+       L261 167
+       L280 231
+       L226 193
+       L204 252
+       L182 193
+       L128 231
+       L147 167
+       L80 166
+       L134 126
+       L80 86
+       L147 85
+       L128 21
+       L182 59
+       Z"
+    fill="#f7e5dc"
+    stroke="#080d10"
+    stroke-width="4"
+    stroke-linejoin="miter"/>
+</svg>
