@@ -20,11 +20,14 @@
     left: 50%;
 }
 
+.left-content-container {
+    margin-top: 250px;
+}
 
 .pc {
     width: 500px;
 }
 
 .headphone {
-    width: 500px;
+    width: 800px;
 }
