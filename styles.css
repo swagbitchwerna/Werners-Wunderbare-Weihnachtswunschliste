@@ -1,4 +1,30 @@
+.wishlist {
+    display: flex;
+}
+
+.left-side {
+    width: 50%;
+}
+
+.right-side {
+    width: 50%;
+}
+
 .moin {
     position: absolute;
     left: 0px;
+}
+
+.moin2 {
+    position: absolute;
+    left: 50%;
+}
+
+
+.pc {
+    width: 500px;
+}
+
+.headphone {
+    width: 500px;
 }
