@@ -31,18 +31,15 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 200px;
+    align-items: center;
 }
 
-.star-left {
+.star-left, .star-right {
     position: absolute;
-    left: 0px;
-}
-
-.star-right {
-    position: absolute;
-    left: 50%;
+    width: 50%;
+    left: -16%;
+    top: -10%;
 }
 
 p {
@@ -67,4 +64,17 @@ h1 {
     text-align: center;
     border-radius: 20px;
     /* rotate: 357deg; */
+}
+
+.left-content-container, .right-content-container {
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.img-l, .img-r {
+    width: 80%;
 }
