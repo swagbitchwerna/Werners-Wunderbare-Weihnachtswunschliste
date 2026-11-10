@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="78 -1 252 255" width="252" height="255">
+  <path d="M204 1 L226 59 L280 21 L261 85 L328 86 L274 126 L328 166 L261 167 L280 231 L226 193 L204 252 L182 193 L128 231 L147 167 L80 166 L134 126 L80 86 L147 85 L128 21 L182 59 Z" fill="#FEA712" stroke="#E76219" stroke-width="4" stroke-linejoin="miter"/>
+  <text x="204" y="126" transform="rotate(0, 204, 126)" font-family="Helvetica" font-size="35" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#1C1C1C">ab 17€</text>
+</svg>
