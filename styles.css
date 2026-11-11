@@ -28,6 +28,7 @@
 body {
     background-color: #FDDCA9;
     margin: 0;
+    padding: 2%;
 }
 
 .heading {
@@ -35,7 +36,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #562717;
-    margin: 3vh auto 10vh;
+    margin: 2vh auto 10vh;
     border-radius: 20px;
     font-family: "brachial";
     width: 80vw;
@@ -55,7 +56,7 @@ h1 {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 20vh;
     align-items: center;
 }
 
@@ -69,7 +70,9 @@ a {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 3%;
+    padding: 2vw;
+    width: 25vw;
+    /* height: ; */
     background-color: #562717;
 
     transition: transform .2s; /* animation */
