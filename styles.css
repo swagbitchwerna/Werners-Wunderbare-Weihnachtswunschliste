@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 80px 200px;
+    gap: 80px 20px;
 }
 
 h1 {
@@ -57,8 +57,9 @@ a {
     align-items: center;
     position: relative;
     padding: 2vw;
-    width: 25vw;
-    height: 30vw;
+    width: 30vw;
+    /* width: calc(50% - 20px); */
+    height: 45vw;
     background-color: #562717;
 
     transition: transform .2s; /* animation */
@@ -95,12 +96,12 @@ a {
 p {
     text-align: center;
     font-family: "portal";
-    font-size: 3vw;
+    font-size: 5vw;
     color: #e8621a;
 }
 
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
     body {
         background-color: pink;
     }
@@ -112,4 +113,4 @@ p {
     .blocker {
         display: none;
     }
-}
+} */
