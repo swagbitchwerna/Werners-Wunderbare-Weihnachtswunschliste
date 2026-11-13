@@ -1,13 +1,4 @@
 @font-face {
-    font-family: disco;
-    src: url(/pictures/70SdiscopersonaluseBold-w14z2.otf);
-}
-
-@font-face {
-    font-family: kritzelei;
-    src: url(/pictures/BubbleBath.ttf);
-}
-@font-face {
     font-family: portal;
     src: url(/pictures/Typographica-Blp5.ttf);
 }
@@ -44,6 +35,9 @@ body {
 
 .wishlist {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px 200px;
 }
 
 h1 {
@@ -52,19 +46,11 @@ h1 {
     color: #FEA712;
 }
 
-.left-side, .right-side {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20vh;
-    align-items: center;
-}
-
 a {
     text-decoration: none;
 }
 
-.left-content-container, .right-content-container {
+.content-container {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -78,28 +64,26 @@ a {
     transition: transform .2s; /* animation */
 }
 
-.left-content-container:hover, .right-content-container:hover {
+.content-container:hover {
     transform: scale(1.1); /* wird 10% größer */
 }
 
-.left-content-container:hover .star-left-rotate,
-.right-content-container:hover .star-right-rotate {
+.content-container:hover .star-rotate {
     animation: drehen 3s linear infinite;
 }
 
-.star-left, .star-left-rotate, 
-.star-right, .star-right-rotate {
+.star, .star-rotate {
     position: absolute;
     width: 50%;
     left: -16%;
     top: -10%;
 }
 
-.star-left, .star-right {
+.star {
     z-index: 3;
 }
 
-.star-left-rotate, .star-right-rotate {
+.star-rotate {
     z-index: 2;
 }
 
@@ -116,3 +100,16 @@ p {
 }
 
 
+@media screen and (max-width: 450px) {
+    body {
+        background-color: pink;
+    }
+
+    .wishlist {
+        flex-direction: column;
+    }
+
+    .blocker {
+        display: none;
+    }
+}
