@@ -1,83 +1,154 @@
+
+/* ================================
+   SCHRIFTARTEN
+   ================================ */
+
 @font-face {
     font-family: portal;
-    src: url(/pictures/Typographica-Blp5.ttf);
+    src: url("pictures/Typographica-Blp5.ttf");
 }
+
 @font-face {
     font-family: brachial;
-    src: url(/pictures/QuartzoBold-W9lv.ttf);
+    src: url("pictures/QuartzoBold-W9lv.ttf");
 }
+
+/* ================================
+   ANIMATION
+   ================================ */
 
 @keyframes drehen {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
+/* ================================
+   GRUNDEINSTELLUNGEN
+   ================================ */
+
+* {
+    box-sizing: border-box; /* KI-ÄNDERUNG */
+}
+
 body {
     background-color: #FDDCA9;
     margin: 0;
-    padding: 2%;
+    padding: 32px 4%; /* KI-ÄNDERUNG */
+    overflow-x: hidden; /* KI-ÄNDERUNG */
 }
+
+/* ================================
+   ÜBERSCHRIFT
+   ================================ */
 
 .heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #562717;
-    margin: 2vh auto 10vh;
-    border-radius: 20px;
-    font-family: "brachial";
-    width: 80vw;
-}
 
-.wishlist {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 80px 20px;
+    background-color: #562717;
+
+    margin: 20px auto 85px; /* KI-ÄNDERUNG */
+    border-radius: 24px; /* KI-ÄNDERUNG */
+
+    font-family: "brachial";
+
+    width: min(850px, 85%); /* KI-ÄNDERUNG */
+    min-height: 120px; /* KI-ÄNDERUNG */
+
+    padding: 15px 25px; /* KI-ÄNDERUNG */
 }
 
 h1 {
     text-align: center;
-    font-size: 5vw;
+
+    font-size: clamp(32px, 4vw, 58px); /* KI-ÄNDERUNG */
+
     color: #FEA712;
+    margin: 0; /* KI-ÄNDERUNG */
 }
+
+/* ================================
+   PRODUKT-GRID
+   ================================ */
+
+.wishlist {
+    display: grid; /* KI-ÄNDERUNG */
+    
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* KI-ÄNDERUNG */
+
+    justify-content: center;
+
+    gap: 85px 35px; /* KI-ÄNDERUNG */
+
+    max-width: 1200px; /* KI-ÄNDERUNG */
+    margin: 0 auto; /* KI-ÄNDERUNG */
+}
+
+/* ================================
+   PRODUKT-CONTAINER
+   ================================ */
 
 a {
     text-decoration: none;
+    min-width: 0; /* KI-ÄNDERUNG */
 }
 
 .content-container {
-    border-radius: 20px;
+    border-radius: 22px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* KI-ÄNDERUNG */
+
     position: relative;
-    padding: 2vw;
-    width: 30vw;
-    /* width: calc(50% - 20px); */
-    height: 45vw;
+
+    padding: 30px 20px; /* KI-ÄNDERUNG */
+
+    width: 100%; /* KI-ÄNDERUNG */
+    height: 100%; /* KI-ÄNDERUNG */
+    min-height: 390px; /* KI-ÄNDERUNG */
+
     background-color: #562717;
 
-    transition: transform .2s; /* animation */
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease; /* KI-ÄNDERUNG */
+
+    box-shadow: 0 8px 18px rgba(86, 39, 23, 0.12); /* KI-ÄNDERUNG */
 }
 
+/* KI-ÄNDERUNG: Dezenterer Hover-Effekt */
+
 .content-container:hover {
-    transform: scale(1.1); /* wird 10% größer */
+    transform: scale(1.045);
+
+    box-shadow: 0 14px 28px rgba(86, 39, 23, 0.22);
 }
+
+/* KI-ÄNDERUNG: Sterne drehen sich weiterhin beim Hover */
 
 .content-container:hover .star-rotate {
     animation: drehen 3s linear infinite;
 }
 
-.star, .star-rotate {
+/* ================================
+   STERNE
+   ================================ */
+
+.star,
+.star-rotate {
     position: absolute;
-    width: 50%;
-    left: -16%;
-    top: -10%;
+
+    width: 43%; /* KI-ÄNDERUNG */
+
+    left: -13%; /* KI-ÄNDERUNG */
+    top: -8%; /* KI-ÄNDERUNG */
 }
 
 .star {
@@ -88,29 +159,216 @@ a {
     z-index: 2;
 }
 
-.img-l, .img-r {
-    width: 80%;
+/* ================================
+   PRODUKTBILDER
+   ================================ */
+
+.img-l,
+.img-r {
+    width: 85%; /* KI-ÄNDERUNG */
+
+    height: 250px; /* KI-ÄNDERUNG */
+
+    object-fit: contain; /* KI-ÄNDERUNG */
+
     z-index: 1;
+
+    margin-top: 10px; /* KI-ÄNDERUNG */
 }
+
+/* ================================
+   PRODUKTNAMEN
+   ================================ */
 
 p {
     text-align: center;
+
     font-family: "portal";
-    font-size: 5vw;
+
+    font-size: clamp(25px, 2.5vw, 36px); /* KI-ÄNDERUNG */
+
     color: #e8621a;
+
+    margin: 20px 0 5px; /* KI-ÄNDERUNG */
+
+    line-height: 1.2; /* KI-ÄNDERUNG */
 }
 
+/* ==================================================
+   KI-ÄNDERUNG: TABLET-DESIGN
+   ================================================== */
 
-/* @media screen and (max-width: 450px) {
-    body {
-        background-color: pink;
-    }
+@media screen and (max-width: 900px) {
 
     .wishlist {
-        flex-direction: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 65px 25px;
     }
 
-    .blocker {
-        display: none;
+    .heading {
+        margin-bottom: 75px;
+        width: 90%;
     }
-} */
+
+    .content-container {
+        min-height: 360px;
+        padding: 25px 15px;
+    }
+
+    .img-l,
+    .img-r {
+        height: 220px;
+    }
+
+    p {
+        font-size: clamp(25px, 3.5vw, 32px);
+    }
+}
+
+/* ==================================================
+   KI-ÄNDERUNG: SMARTPHONES
+   iPhone 11 bis iPhone 17
+   ================================================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 18px 18px 35px;
+    }
+
+    /* Überschrift */
+
+    .heading {
+        width: 100%;
+
+        min-height: 85px;
+
+        margin: 10px auto 55px;
+
+        padding: 12px;
+
+        border-radius: 17px;
+    }
+
+    h1 {
+        font-size: clamp(27px, 7vw, 38px);
+    }
+
+    /* KI-ÄNDERUNG: Nur EIN Produkt pro Zeile */
+
+    .wishlist {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 55px;
+
+        width: 100%;
+        max-width: 420px;
+
+        margin: 0 auto;
+    }
+
+    /* Produktcontainer */
+
+    .content-container {
+        width: 100%;
+
+        min-height: 350px;
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    /* Produktbilder */
+
+    .img-l,
+    .img-r {
+        width: 82%;
+        height: 220px;
+
+        margin-top: 5px;
+    }
+
+    /* Sterne */
+
+
+    .star,
+    .star-rotate {
+        position: absolute;
+
+        width: 27%;
+
+        left: -3%;
+        top: -3%;
+
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Produktnamen */
+
+    p {
+        font-size: clamp(27px, 7vw, 34px);
+
+        margin-top: 18px;
+        line-height: 1.15;
+    }
+
+    /* KI-ÄNDERUNG: Hover-Vergrößerung auf Touch-Geräten deaktivieren */
+
+    /* .content-container:hover {
+        transform: none;
+        box-shadow: 0 8px 18px rgba(86, 39, 23, 0.12);
+    }
+
+    .content-container:hover .star-rotate {
+        animation: none;
+    } */
+}
+
+/* ==================================================
+   KI-ÄNDERUNG: SEHR KLEINE SMARTPHONES
+   ================================================== */
+
+@media screen and (max-width: 360px) {
+
+    body {
+        padding: 14px 14px 30px;
+    }
+
+    .heading {
+        min-height: 75px;
+        margin-bottom: 45px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .content-container {
+        min-height: 320px;
+        padding: 20px 15px;
+    }
+
+    .img-l,
+    .img-r {
+        height: 195px;
+    }
+
+    p {
+        font-size: 26px;
+    }
+}
+
+/* KI-ÄNDERUNG: Bewegungsanimation bei entsprechender Systemeinstellung reduzieren */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
